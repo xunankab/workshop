@@ -13,7 +13,7 @@ RUN /bin/bash -c 'chmod +x /home/user/main.sh'
 ADD --chown=1000:1000 id.py /home/user/
 RUN /bin/bash -c 'chmod +x /home/user/id.py'
 
-ENV CONNECTION=tcp:172.17.0.2:5762
+ENV CONNECTION=tcp:172.17.0.1:5760
 ENV VEHICLEID=1
 
 ENTRYPOINT ["/home/user/main.sh"]

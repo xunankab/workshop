@@ -6,13 +6,12 @@ set -x
 # Variables
 # =============================================================================
 
-IPADDRESS=$1
-PORT=$2
-VEHICLEID=$3
+CONNECTION=$1
+VEHICLEID=$2
+ALTITUDE=$3
 LATITUDE=$4
 LONGITUDE=$5
-ALTITUDE=$6
-SPEED=$7
+SPEED=$6
 
 # =============================================================================
 # Functions
@@ -25,6 +24,5 @@ SPEED=$7
 # =============================================================================
 
 cd $HOME/
-python goto.py --connect=${IPADDRESS}:${PORT} --id=${VEHICLEID} \
-               --lat=${LATITUDE} --lon=${LONGITUDE} --alt=${ALTITUDE} \
-               --speed=${SPEED}
+python goto.py --connect=${CONNECTION} --id=${VEHICLEID} --alt=${ALTITUDE} \
+               --lat=${LATITUDE} --lon=${LONGITUDE} --speed=${SPEED}
