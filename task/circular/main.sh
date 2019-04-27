@@ -6,12 +6,11 @@ set -x
 # Variables
 # =============================================================================
 
-IPADDRESS=$1
-PORT=$2
-VEHICLEID=$3
+CONNECTION=$1
+VEHICLEID=$2
+ALTITUDE=$3
 LATITUDE=$4
 LONGITUDE=$5
-ALTITUDE=$6
 
 # =============================================================================
 # Functions
@@ -24,5 +23,5 @@ ALTITUDE=$6
 # =============================================================================
 
 cd $HOME/
-python circular.py --connect=${IPADDRESS}:${PORT} --id=${VEHICLEID} \
-               --lat=${LATITUDE} --lon=${LONGITUDE} --alt=${ALTITUDE} 
+python circular.py --connect=${CONNECTION} --id=${VEHICLEID} --alt=${ALTITUDE} \
+                   --lat=${LATITUDE} --lon=${LONGITUDE}
